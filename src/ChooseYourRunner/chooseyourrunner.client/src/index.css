@@ -1,0 +1,86 @@
+/* Designsystemet: theme tokens + component styles (loaded first, provides base reset) */
+@import "@digdir/designsystemet-css/theme.css";
+@import "@digdir/designsystemet-css";
+
+/* Tailwind: theme + utilities only — NO preflight, so Designsystemet components stay intact */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Fonts */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/inter/800.css";
+@import "@fontsource/inter/900.css";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-runner-a: #2563EB;
+  --color-runner-a-dark: #1E3A8A;
+  --color-runner-a-light: #3B82F6;
+  --color-runner-b: #E84D1A;
+  --color-runner-b-dark: #9A3412;
+  --color-runner-b-light: #F97316;
+  --color-accent: #F59E0B;
+  --color-accent-dark: #D97706;
+  --color-accent-light: #FBBF24;
+  --color-surface-dark: #0F172A;
+  --color-surface-darker: #020617;
+  --color-surface-light: #F1F5F9;
+  --color-text-primary: #1E293B;
+  --color-text-on-dark: #F8FAFC;
+
+  --animate-slide-in-left: slide-in-left 0.5s ease-out both;
+  --animate-slide-in-right: slide-in-right 0.5s ease-out both;
+  --animate-pop-in: pop-in 0.3s ease-out 0.4s both;
+  --animate-slide-up: slide-up 0.3s ease-out both;
+  --animate-winner-glow: winner-glow 0.6s ease-in-out 2;
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes winner-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.7), 0 0 60px rgba(245, 158, 11, 0.3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+  min-height: 100vh;
+  color: #F8FAFC;
+}
+
+#root {
+  min-height: 100vh;
+}

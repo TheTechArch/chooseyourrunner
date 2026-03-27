@@ -1,0 +1,34 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.csproj.user
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+dist/
+dist-ssr/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.sw?
+*.local
+
+# Logs
+logs/
+*.log

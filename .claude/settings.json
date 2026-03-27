@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:designsystemet.no)",
+      "WebSearch",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh repo:*)",
+      "Bash(gh issue:*)",
+      "Bash(npm install:*)",
+      "Bash(dotnet build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(find d:/repos/chooseyourrunner/src/ChooseYourRunner/chooseyourrunner.client/node_modules/@digdir/designsystemet-react/dist/types -name types* -o -name DefaultProps*)",
+      "Bash(node -e \"const d=require\\(''''fs''''\\).readFileSync\\(0,''''utf8''''\\); const p=JSON.parse\\(d\\); console.log\\(JSON.stringify\\(p.exports,null,2\\)\\)\")",
+      "Bash(curl -s -L https://www.holmenkollstafetten.no)",
+      "Bash(curl -s -L https://www.holmenkollstafetten.no/etapper)",
+      "Bash(curl -s -L https://www.holmenkollstafetten.no/loype)",
+      "WebFetch(domain:holmenkollstafetten.no)",
+      "WebFetch(domain:spurt.no)",
+      "WebFetch(domain:www.steget.no)",
+      "WebFetch(domain:assets.mustasj.dev)"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="chooseyourrunner.client/chooseyourrunner.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ChooseYourRunner.Server/ChooseYourRunner.Server.csproj" />
+</Solution>
