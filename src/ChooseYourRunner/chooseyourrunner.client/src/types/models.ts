@@ -3,6 +3,14 @@ export type Sex = 'male' | 'female';
 
 export const TRAINING_LEVELS: TrainingLevel[] = ['Untrained', 'Casual', 'Regular', 'Strong', 'Peak'];
 
+export const TRAINING_LEVEL_LABELS: Record<TrainingLevel, string> = {
+  Untrained: 'Untrained',
+  Casual: 'Casual',
+  Regular: 'Regular',
+  Strong: 'Strong',
+  Peak: 'Northug',
+};
+
 export interface RunnerInput {
   name: string;
   age: number;

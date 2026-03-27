@@ -1,6 +1,6 @@
 import { Textfield, ToggleGroup } from '@digdir/designsystemet-react';
 import type { RunnerInput, TrainingLevel, Sex } from '../../types/models';
-import { TRAINING_LEVELS } from '../../types/models';
+import { TRAINING_LEVELS, TRAINING_LEVEL_LABELS } from '../../types/models';
 
 const selectStyle: React.CSSProperties = {
   width: '100%',
@@ -108,7 +108,7 @@ export function RunnerForm({ runner, onChange, side }: RunnerFormProps) {
           onChange={(e) => onChange({ ...runner, trainingLevel: e.target.value as TrainingLevel })}
         >
           {TRAINING_LEVELS.map((level) => (
-            <option key={level} value={level}>{level}</option>
+            <option key={level} value={level}>{TRAINING_LEVEL_LABELS[level]}</option>
           ))}
         </select>
       </div>
